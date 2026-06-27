@@ -1,1 +1,108 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="M. Davamshu Shashank — AI and ML Engineer, Frontend Developer">
+  <title>M. Davamshu Shashank — AI &amp; ML Engineer / Frontend Developer</title>
+  <desc>Light premium banner with a custom AI-core mark, gradient accents, name and role.</desc>
 
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8F9FC"/>
+    </linearGradient>
+
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <radialGradient id="coreCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="60%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <clipPath id="roundedCanvas">
+      <rect x="0" y="0" width="1200" height="320" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#roundedCanvas)">
+    <rect x="0" y="0" width="1200" height="320" fill="url(#bgGrad)"/>
+
+    <!-- soft decorative dot grid, top-right -->
+    <g fill="#2563EB" opacity="0.08">
+      <circle cx="980" cy="50" r="3"/>
+      <circle cx="1020" cy="50" r="3"/>
+      <circle cx="1060" cy="50" r="3"/>
+      <circle cx="1100" cy="50" r="3"/>
+      <circle cx="980" cy="86" r="3"/>
+      <circle cx="1020" cy="86" r="3"/>
+      <circle cx="1060" cy="86" r="3"/>
+      <circle cx="1100" cy="86" r="3"/>
+      <circle cx="980" cy="122" r="3"/>
+      <circle cx="1020" cy="122" r="3"/>
+      <circle cx="1060" cy="122" r="3"/>
+      <circle cx="1100" cy="122" r="3"/>
+    </g>
+
+    <!-- AI core mark, right side -->
+    <g transform="translate(975,160)">
+      <circle r="118" fill="none" stroke="url(#brandGrad)" stroke-width="1" stroke-dasharray="2 9" opacity="0.45"/>
+      <circle r="86" fill="none" stroke="url(#brandGrad)" stroke-width="1.2" opacity="0.55"/>
+      <circle cx="0" cy="-86" r="4" fill="#2563EB"/>
+      <circle cx="86" cy="0" r="3" fill="#8B5CF6"/>
+      <circle cx="0" cy="86" r="3" fill="#6366F1"/>
+      <circle cx="-86" cy="0" r="4" fill="#2563EB"/>
+
+      <circle r="58" fill="none" stroke="url(#brandGrad)" stroke-width="1.4" opacity="0.7"/>
+
+      <g transform="rotate(0)">
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+      </g>
+      <g transform="rotate(90)">
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+      </g>
+      <g transform="rotate(180)">
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+      </g>
+      <g transform="rotate(270)">
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+      </g>
+
+      <circle r="34" fill="url(#coreCenter)"/>
+      <circle r="34" fill="none" stroke="url(#brandGrad)" stroke-width="1.6"/>
+      <circle r="11" fill="url(#brandGrad)"/>
+    </g>
+
+    <!-- left accent rule -->
+    <rect x="64" y="92" width="4" height="136" rx="2" fill="url(#brandGrad)"/>
+
+    <!-- name -->
+    <text x="96" y="148" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="700" fill="#0F172A">M. Davamshu Shashank</text>
+
+    <!-- role -->
+    <text x="97" y="186" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="21" font-weight="600" fill="url(#textGrad)">AI &amp; ML Engineer · Frontend Developer</text>
+
+    <!-- tagline -->
+    <text x="97" y="218" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="400" fill="#64748B">Building intelligent interfaces — from deep learning models to JARVIS, an AI assistant concept.</text>
+
+    <!-- small tags -->
+    <g font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600">
+      <rect x="96" y="240" width="122" height="28" rx="14" fill="#EFF4FF"/>
+      <text x="157" y="258" text-anchor="middle" fill="#2563EB">Deep Learning</text>
+
+      <rect x="228" y="240" width="70" height="28" rx="14" fill="#EEF0FE"/>
+      <text x="263" y="258" text-anchor="middle" fill="#6366F1">React</text>
+
+      <rect x="308" y="240" width="56" height="28" rx="14" fill="#F4EEFE"/>
+      <text x="336" y="258" text-anchor="middle" fill="#8B5CF6">NLP</text>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="1198" height="318" rx="23" fill="none" stroke="#E5E9F2" stroke-width="1.5"/>
+</svg>
