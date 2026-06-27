@@ -29,13 +29,122 @@
     <clipPath id="roundedCanvas">
       <rect x="0" y="0" width="1200" height="320" rx="24"/>
     </clipPath>
+
+    <!-- Glow filter for the AI core pulse -->
+    <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle glow for particles -->
+    <filter id="particleGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <g clip-path="url(#roundedCanvas)">
     <rect x="0" y="0" width="1200" height="320" fill="url(#bgGrad)"/>
 
-    <!-- soft decorative dot grid, top-right -->
+    <!-- Background abstract lines — slow wave drift -->
+    <g opacity="0.04" stroke="#2563EB" stroke-width="1" fill="none">
+      <path d="M0,80 Q300,60 600,80 Q900,100 1200,80">
+        <animate attributeName="d" dur="18s" repeatCount="indefinite"
+          values="
+            M0,80 Q300,60 600,80 Q900,100 1200,80;
+            M0,85 Q300,70 600,75 Q900,90 1200,85;
+            M0,80 Q300,60 600,80 Q900,100 1200,80"
+          calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"/>
+      </path>
+      <path d="M0,160 Q300,140 600,160 Q900,180 1200,160">
+        <animate attributeName="d" dur="22s" repeatCount="indefinite"
+          values="
+            M0,160 Q300,140 600,160 Q900,180 1200,160;
+            M0,165 Q300,155 600,155 Q900,168 1200,165;
+            M0,160 Q300,140 600,160 Q900,180 1200,160"
+          calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"/>
+      </path>
+      <path d="M0,240 Q300,225 600,240 Q900,260 1200,240">
+        <animate attributeName="d" dur="16s" repeatCount="indefinite"
+          values="
+            M0,240 Q300,225 600,240 Q900,260 1200,240;
+            M0,244 Q300,232 600,237 Q900,253 1200,244;
+            M0,240 Q300,225 600,240 Q900,260 1200,240"
+          calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"/>
+      </path>
+    </g>
+
+    <!-- Tiny drifting stars in the background -->
+    <g fill="#6366F1">
+      <!-- Star 1 -->
+      <circle cx="820" cy="38" r="1.2" opacity="0">
+        <animate attributeName="opacity" dur="9s" repeatCount="indefinite"
+          values="0;0.35;0;0.2;0" keyTimes="0;0.3;0.5;0.8;1"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        <animateTransform attributeName="transform" type="translate"
+          dur="9s" repeatCount="indefinite"
+          values="0,0; 4,-3; 8,0; 4,3; 0,0"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </circle>
+      <!-- Star 2 -->
+      <circle cx="860" cy="72" r="1" opacity="0">
+        <animate attributeName="opacity" dur="13s" repeatCount="indefinite" begin="2s"
+          values="0;0.25;0;0.3;0" keyTimes="0;0.25;0.5;0.75;1"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        <animateTransform attributeName="transform" type="translate"
+          dur="13s" repeatCount="indefinite" begin="2s"
+          values="0,0; -3,4; 0,8; 3,4; 0,0"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </circle>
+      <!-- Star 3 -->
+      <circle cx="900" cy="28" r="1.5" opacity="0">
+        <animate attributeName="opacity" dur="11s" repeatCount="indefinite" begin="4.5s"
+          values="0;0.3;0;0.15;0" keyTimes="0;0.35;0.5;0.8;1"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        <animateTransform attributeName="transform" type="translate"
+          dur="11s" repeatCount="indefinite" begin="4.5s"
+          values="0,0; 5,2; 10,0; 5,-2; 0,0"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </circle>
+      <!-- Star 4 -->
+      <circle cx="840" cy="100" r="1" opacity="0">
+        <animate attributeName="opacity" dur="15s" repeatCount="indefinite" begin="1s"
+          values="0;0.2;0;0.28;0" keyTimes="0;0.3;0.55;0.75;1"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        <animateTransform attributeName="transform" type="translate"
+          dur="15s" repeatCount="indefinite" begin="1s"
+          values="0,0; -4,-2; 0,-6; 4,-2; 0,0"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </circle>
+      <!-- Star 5 — lower quadrant -->
+      <circle cx="880" cy="268" r="1.2" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" begin="3s"
+          values="0;0.22;0;0.18;0" keyTimes="0;0.4;0.6;0.8;1"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        <animateTransform attributeName="transform" type="translate"
+          dur="10s" repeatCount="indefinite" begin="3s"
+          values="0,0; 3,-4; 6,0; 3,4; 0,0"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </circle>
+      <!-- Star 6 — lower area -->
+      <circle cx="920" cy="290" r="1" opacity="0">
+        <animate attributeName="opacity" dur="14s" repeatCount="indefinite" begin="6s"
+          values="0;0.25;0;0.2;0" keyTimes="0;0.3;0.5;0.75;1"
+          calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </circle>
+    </g>
+
+    <!-- soft decorative dot grid, top-right — gentle breathing opacity -->
     <g fill="#2563EB" opacity="0.08">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        values="0.08;0.13;0.08"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
       <circle cx="980" cy="50" r="3"/>
       <circle cx="1020" cy="50" r="3"/>
       <circle cx="1060" cy="50" r="3"/>
@@ -50,49 +159,218 @@
       <circle cx="1100" cy="122" r="3"/>
     </g>
 
-    <!-- AI core mark, right side -->
-    <g transform="translate(975,160)">
-      <circle r="118" fill="none" stroke="url(#brandGrad)" stroke-width="1" stroke-dasharray="2 9" opacity="0.45"/>
-      <circle r="86" fill="none" stroke="url(#brandGrad)" stroke-width="1.2" opacity="0.55"/>
-      <circle cx="0" cy="-86" r="4" fill="#2563EB"/>
-      <circle cx="86" cy="0" r="3" fill="#8B5CF6"/>
-      <circle cx="0" cy="86" r="3" fill="#6366F1"/>
-      <circle cx="-86" cy="0" r="4" fill="#2563EB"/>
+    <!-- AI core mark — the whole mark floats gently up/down -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        dur="7s" repeatCount="indefinite"
+        values="0,0; 0,-5; 0,0; 0,5; 0,0"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
 
-      <circle r="58" fill="none" stroke="url(#brandGrad)" stroke-width="1.4" opacity="0.7"/>
+      <g transform="translate(975,160)">
 
-      <g transform="rotate(0)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
-      </g>
-      <g transform="rotate(90)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
-      </g>
-      <g transform="rotate(180)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
-      </g>
-      <g transform="rotate(270)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
-      </g>
+        <!-- Outermost ring — very slow CW rotation -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate"
+            dur="40s" repeatCount="indefinite" from="0" to="360"/>
+          <circle r="118" fill="none" stroke="url(#brandGrad)" stroke-width="1" stroke-dasharray="2 9" opacity="0.45"/>
+        </g>
 
-      <circle r="34" fill="url(#coreCenter)"/>
-      <circle r="34" fill="none" stroke="url(#brandGrad)" stroke-width="1.6"/>
-      <circle r="11" fill="url(#brandGrad)"/>
+        <!-- Orbit ring + cardinal dots — slow CCW rotation -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate"
+            dur="28s" repeatCount="indefinite" from="0" to="-360"/>
+          <circle r="86" fill="none" stroke="url(#brandGrad)" stroke-width="1.2" opacity="0.55"/>
+          <circle cx="0" cy="-86" r="4" fill="#2563EB"/>
+          <circle cx="86" cy="0" r="3" fill="#8B5CF6"/>
+          <circle cx="0" cy="86" r="3" fill="#6366F1"/>
+          <circle cx="-86" cy="0" r="4" fill="#2563EB"/>
+        </g>
+
+        <!-- Orbiting particle 1 — CW, r=86 -->
+        <circle r="2.5" fill="#2563EB" filter="url(#particleGlow)" opacity="0.7">
+          <animateMotion dur="14s" repeatCount="indefinite">
+            <mpath href="#orbit86path"/>
+          </animateMotion>
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite"
+            values="0.7;1;0.7;0.4;0.7"
+            calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        </circle>
+
+        <!-- Orbiting particle 2 — CW, r=86, offset -->
+        <circle r="2" fill="#8B5CF6" filter="url(#particleGlow)" opacity="0.6">
+          <animateMotion dur="14s" repeatCount="indefinite" begin="7s">
+            <mpath href="#orbit86path"/>
+          </animateMotion>
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite" begin="7s"
+            values="0.6;0.9;0.6;0.3;0.6"
+            calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        </circle>
+
+        <!-- Orbiting particle 3 — faster, r=58 -->
+        <circle r="1.8" fill="#6366F1" filter="url(#particleGlow)" opacity="0.55">
+          <animateMotion dur="10s" repeatCount="indefinite" begin="2s">
+            <mpath href="#orbit58path"/>
+          </animateMotion>
+        </circle>
+
+        <!-- Orbiting particle 4 — r=118, slow, faint -->
+        <circle r="2" fill="#2563EB" filter="url(#particleGlow)" opacity="0.35">
+          <animateMotion dur="22s" repeatCount="indefinite" begin="4s">
+            <mpath href="#orbit118path"/>
+          </animateMotion>
+        </circle>
+
+        <!-- Middle ring — slow CW, slightly different speed -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate"
+            dur="20s" repeatCount="indefinite" from="0" to="360"/>
+          <circle r="58" fill="none" stroke="url(#brandGrad)" stroke-width="1.4" opacity="0.7"/>
+        </g>
+
+        <!-- Tick marks — slow CW rotation matching middle ring feel -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate"
+            dur="30s" repeatCount="indefinite" from="0" to="360"/>
+          <g transform="rotate(0)">
+            <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
+          </g>
+          <g transform="rotate(90)">
+            <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
+          </g>
+          <g transform="rotate(180)">
+            <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
+          </g>
+          <g transform="rotate(270)">
+            <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
+          </g>
+        </g>
+
+        <!-- Inner glowing core — pulsing radius + breathing opacity -->
+        <circle r="34" fill="url(#coreCenter)">
+          <animate attributeName="r" dur="5s" repeatCount="indefinite"
+            values="34;37;34;32;34"
+            calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+          <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
+            values="1;0.85;1;0.9;1"
+            calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        </circle>
+        <circle r="34" fill="none" stroke="url(#brandGrad)" stroke-width="1.6">
+          <animate attributeName="r" dur="5s" repeatCount="indefinite"
+            values="34;37;34;32;34"
+            calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        </circle>
+
+        <!-- Glow halo behind inner core — breathing gradient glow -->
+        <circle r="34" fill="none" stroke="url(#brandGrad)" stroke-width="14" opacity="0">
+          <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
+            values="0;0.12;0;0.08;0"
+            calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+          <animate attributeName="r" dur="5s" repeatCount="indefinite"
+            values="34;40;34;30;34"
+            calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        </circle>
+
+        <!-- Central dot — slow CCW rotation + pulse -->
+        <circle r="11" fill="url(#brandGrad)">
+          <animate attributeName="r" dur="5s" repeatCount="indefinite"
+            values="11;12.5;11;10;11"
+            calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        </circle>
+
+      </g>
     </g>
 
-    <!-- left accent rule -->
-    <rect x="64" y="92" width="4" height="136" rx="2" fill="url(#brandGrad)"/>
+    <!-- Orbit path definitions — centered at 975,160 (same as core translate) -->
+    <defs>
+      <path id="orbit86path" d="M975,74 A86,86 0 1,1 974.999,74" fill="none"/>
+      <path id="orbit58path" d="M975,102 A58,58 0 1,1 974.999,102" fill="none"/>
+      <path id="orbit118path" d="M975,42 A118,118 0 1,1 974.999,42" fill="none"/>
+    </defs>
 
-    <!-- name -->
-    <text x="96" y="148" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="700" fill="#0F172A">M. Davamshu Shashank</text>
+    <!-- Slowly drifting background particles (left half, very faint) -->
+    <g opacity="0.18" fill="#6366F1">
+      <!-- Particle A -->
+      <circle cx="200" cy="60" r="1.5">
+        <animateTransform attributeName="transform" type="translate"
+          dur="20s" repeatCount="indefinite"
+          values="0,0; 6,-8; 12,0; 6,8; 0,0"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+          values="0.18;0.4;0.18;0.1;0.18"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+      </circle>
+      <!-- Particle B -->
+      <circle cx="480" cy="280" r="1.2" fill="#2563EB">
+        <animateTransform attributeName="transform" type="translate"
+          dur="17s" repeatCount="indefinite" begin="3s"
+          values="0,0; -5,6; 0,12; 5,6; 0,0"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        <animate attributeName="opacity" dur="17s" repeatCount="indefinite" begin="3s"
+          values="0.18;0.35;0.18;0.08;0.18"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+      </circle>
+      <!-- Particle C -->
+      <circle cx="680" cy="40" r="1" fill="#8B5CF6">
+        <animateTransform attributeName="transform" type="translate"
+          dur="24s" repeatCount="indefinite" begin="6s"
+          values="0,0; 8,4; 16,0; 8,-4; 0,0"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        <animate attributeName="opacity" dur="24s" repeatCount="indefinite" begin="6s"
+          values="0.18;0.3;0.18;0.05;0.18"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+      </circle>
+      <!-- Particle D -->
+      <circle cx="350" cy="300" r="1.5" fill="#6366F1">
+        <animateTransform attributeName="transform" type="translate"
+          dur="19s" repeatCount="indefinite" begin="9s"
+          values="0,0; -6,-4; 0,-10; 6,-4; 0,0"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+        <animate attributeName="opacity" dur="19s" repeatCount="indefinite" begin="9s"
+          values="0.18;0.38;0.18;0.07;0.18"
+          calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+      </circle>
+    </g>
 
-    <!-- role -->
-    <text x="97" y="186" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="21" font-weight="600" fill="url(#textGrad)">AI &amp; ML Engineer · Frontend Developer</text>
+    <!-- left accent rule — very subtle vertical drift -->
+    <rect x="64" y="92" width="4" height="136" rx="2" fill="url(#brandGrad)">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        values="1;0.75;1"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+    </rect>
 
-    <!-- tagline -->
-    <text x="97" y="218" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="400" fill="#64748B">Building intelligent interfaces — from deep learning models to JARVIS, an AI assistant concept.</text>
+    <!-- name — smooth subtle float matching core -->
+    <text x="96" y="148" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="700" fill="#0F172A">
+      M. Davamshu Shashank
+      <animateTransform attributeName="transform" type="translate"
+        dur="7s" repeatCount="indefinite"
+        values="0,0; 0,-3; 0,0; 0,3; 0,0"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+    </text>
 
-    <!-- small tags -->
+    <!-- role — matching float, slight offset phase -->
+    <text x="97" y="186" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="21" font-weight="600" fill="url(#textGrad)">
+      AI &amp; ML Engineer · Frontend Developer
+      <animateTransform attributeName="transform" type="translate"
+        dur="7s" repeatCount="indefinite" begin="0.4s"
+        values="0,0; 0,-3; 0,0; 0,3; 0,0"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+    </text>
+
+    <!-- tagline — matching float, slight offset phase -->
+    <text x="97" y="218" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="400" fill="#64748B">
+      Building intelligent interfaces — from deep learning models to JARVIS, an AI assistant concept.
+      <animateTransform attributeName="transform" type="translate"
+        dur="7s" repeatCount="indefinite" begin="0.8s"
+        values="0,0; 0,-3; 0,0; 0,3; 0,0"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+    </text>
+
+    <!-- small tags — gentle floating in sync -->
     <g font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600">
+      <animateTransform attributeName="transform" type="translate"
+        dur="7s" repeatCount="indefinite" begin="1.2s"
+        values="0,0; 0,-3; 0,0; 0,3; 0,0"
+        calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
       <rect x="96" y="240" width="122" height="28" rx="14" fill="#EFF4FF"/>
       <text x="157" y="258" text-anchor="middle" fill="#2563EB">Deep Learning</text>
 
