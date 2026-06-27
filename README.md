@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.svg" width="100%" alt="M. Davamshu Shashank — banner" />
+<img src="./assets/banner.svg" width="100%" alt="M. Davamshu Shashank — AI &amp; ML Engineer, Frontend Developer" />
 
 <br/>
 
@@ -17,7 +17,7 @@
 <td align="center">
 
 I design and build intelligent, AI-driven interfaces — from deep learning models that classify images and text, to conversational assistants inspired by **JARVIS**.
-Currently pursuing a **B.Tech in AI & ML at JNTUK**, graduating 2027.
+Currently pursuing a **B.Tech in AI &amp; ML at JNTUK**, graduating 2027.
 
 </td>
 </tr>
@@ -37,14 +37,14 @@ Currently pursuing a **B.Tech in AI & ML at JNTUK**, graduating 2027.
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
-## About Me
+## About
 
 <table align="center" width="100%">
 <tr>
 <td width="33%" valign="top" align="center">
 <br/>
 
-### ✨ AI &amp; ML
+**AI &amp; ML**
 
 Deep learning, CNNs, NLP and computer vision applied to real datasets.
 
@@ -53,7 +53,7 @@ Deep learning, CNNs, NLP and computer vision applied to real datasets.
 <td width="33%" valign="top" align="center">
 <br/>
 
-### 💻 Frontend
+**Frontend**
 
 React-driven interfaces with motion, polish and real usability.
 
@@ -62,7 +62,7 @@ React-driven interfaces with motion, polish and real usability.
 <td width="33%" valign="top" align="center">
 <br/>
 
-### 🚀 Always Shipping
+**Always shipping**
 
 From mini data-viz projects to full assistant concepts — building constantly.
 
@@ -96,7 +96,7 @@ CGPA
 <td align="center" width="25%">
 
 ### JARVIS
-Flagship Build
+Flagship build
 
 </td>
 </tr>
@@ -104,7 +104,7 @@ Flagship Build
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
-## Tech Stack
+## Tech stack
 
 <div align="center">
 
@@ -119,7 +119,7 @@ Flagship Build
 
 <br/><br/>
 
-**Programming &amp; Data**
+**Programming &amp; data**
 
 <img src="https://img.shields.io/badge/Python-6366F1?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/C-6366F1?style=flat-square&logo=c&logoColor=white" />
@@ -153,59 +153,59 @@ Flagship Build
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
-## Featured Projects
+## Featured projects
 
 <table align="center" width="100%">
 <tr>
-<td width="33%" valign="top">
+<td width="33%" valign="top" align="center">
 
-<h3 align="center">🖼️ Image Classification</h3>
-<p align="center"><sub><b>Computer Vision</b></sub></p>
+<img src="./assets/project-icons/image-classification.svg" width="56" height="56" alt="Computer vision icon" />
 
-<p align="center">A CNN-based deep learning model that classifies images into categories with high accuracy — trained, tuned, and evaluated end to end.</p>
+### Image Classification
+<sub><b>Computer Vision</b></sub>
 
-<p align="center">
+<p>A CNN-based deep learning model that classifies images into categories with high accuracy — trained, tuned, and evaluated end to end.</p>
+
 <img src="https://img.shields.io/badge/Python-2563EB?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/CNN-2563EB?style=flat-square&logoColor=white" />
-</p>
 
-<p align="center">
+<br/><br/>
+
 <a href="https://github.com/shashank-1214/image-classification"><img src="https://img.shields.io/badge/GitHub-Repo-8B5CF6?style=flat-square&logo=github&logoColor=white" /></a>
-</p>
 
 </td>
-<td width="33%" valign="top">
+<td width="33%" valign="top" align="center">
 
-<h3 align="center">📝 Text Classification</h3>
-<p align="center"><sub><b>NLP</b></sub></p>
+<img src="./assets/project-icons/text-classification.svg" width="56" height="56" alt="NLP icon" />
 
-<p align="center">An NLP model that categorizes text using machine learning — turning unstructured language into structured, actionable labels.</p>
+### Text Classification
+<sub><b>NLP</b></sub>
 
-<p align="center">
+<p>An NLP model that categorizes text using machine learning — turning unstructured language into structured, actionable labels.</p>
+
 <img src="https://img.shields.io/badge/Python-6366F1?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/NLP-6366F1?style=flat-square&logoColor=white" />
-</p>
 
-<p align="center">
+<br/><br/>
+
 <a href="https://github.com/shashank-1214/Text-classification"><img src="https://img.shields.io/badge/GitHub-Repo-8B5CF6?style=flat-square&logo=github&logoColor=white" /></a>
-</p>
 
 </td>
-<td width="33%" valign="top">
+<td width="33%" valign="top" align="center">
 
-<h3 align="center">🤖 Responsive AI</h3>
-<p align="center"><sub><b>Conversational AI</b></sub></p>
+<img src="./assets/project-icons/responsive-ai.svg" width="56" height="56" alt="Conversational AI icon" />
 
-<p align="center">A modern, AI-powered chatbot interface designed to feel fluid across every screen size — fast responses, clean state handling, no clutter.</p>
+### Responsive AI
+<sub><b>Conversational AI</b></sub>
 
-<p align="center">
+<p>A modern, AI-powered chatbot interface designed to feel fluid across every screen size — fast responses, clean state handling, no clutter.</p>
+
 <img src="https://img.shields.io/badge/React-8B5CF6?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/AI-8B5CF6?style=flat-square&logoColor=white" />
-</p>
 
-<p align="center">
+<br/><br/>
+
 <a href="https://github.com/shashank-1214/Responsible-AI"><img src="https://img.shields.io/badge/GitHub-Repo-8B5CF6?style=flat-square&logo=github&logoColor=white" /></a>
-</p>
 
 </td>
 </tr>
@@ -213,20 +213,25 @@ Flagship Build
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
-## Currently Designing — JARVIS
+## Currently designing — JARVIS
 
 <table align="center" width="100%">
 <tr>
-<td align="center">
+<td align="center" width="20%">
+
+<img src="./assets/ai-core.svg" width="92" height="92" alt="AI core mark" />
+
+</td>
+<td align="left" width="80%">
 
 An AI assistant concept bringing together NLP, automation, and frontend craft into one cohesive system.
 
 | Capability | Status |
 |:--|:--:|
-| 🗣️ Natural language conversation | ✅ |
-| ⚙️ Task &amp; workflow automation | ✅ |
-| 🔎 Live web search integration | ✅ |
-| 🎙️ Voice interaction layer | ✅ |
+| Natural language conversation | done |
+| Task &amp; workflow automation | done |
+| Live web search integration | done |
+| Voice interaction layer | done |
 
 </td>
 </tr>
@@ -234,7 +239,7 @@ An AI assistant concept bringing together NLP, automation, and frontend craft in
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
-## GitHub Analytics
+## GitHub analytics
 
 <div align="center">
 
@@ -270,16 +275,16 @@ Montessori High School, Kurnool &nbsp;·&nbsp; 97.5%
 </td></tr>
 </table>
 
-## Achievements &amp; Experience
+## Achievements &amp; experience
 
 <table align="center" width="100%">
 <tr><td>
 
-🏢 **AI Intern** — Alfido Tech — worked on real-world AI &amp; ML projects, applying classroom theory to applied problems
+**AI Intern** — Alfido Tech — worked on real-world AI &amp; ML projects, applying classroom theory to applied problems
 
-🛠️ **Java 8 &amp; Collections Workshop** — V CUBE Software Solutions
+**Java 8 &amp; Collections Workshop** — V CUBE Software Solutions
 
-📊 **COVID-19 Dataset Visualization** — analyzed and ranked the top 10 countries by death toll using Python &amp; Matplotlib
+**COVID-19 Dataset Visualization** — analyzed and ranked the top 10 countries by death toll using Python &amp; Matplotlib
 
 </td></tr>
 </table>
@@ -287,8 +292,6 @@ Montessori High School, Kurnool &nbsp;·&nbsp; 97.5%
 <img src="./assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
-
-### 💬
 
 <table>
 <tr><td align="center">
