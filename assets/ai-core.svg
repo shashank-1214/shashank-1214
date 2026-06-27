@@ -1,1 +1,37 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI core brand mark">
+  <title>AI core mark</title>
+  <desc>Standalone brand mark — concentric rings with a gradient core, reused across the profile.</desc>
 
+  <defs>
+    <linearGradient id="acGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="acCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="38%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(120,120)">
+    <circle r="112" fill="none" stroke="url(#acGrad)" stroke-width="0.8" stroke-dasharray="2 9" opacity="0.4"/>
+
+    <circle r="82" fill="none" stroke="url(#acGrad)" stroke-width="1" opacity="0.55"/>
+    <circle cx="0" cy="-82" r="3.4" fill="#2563EB"/>
+    <circle cx="82" cy="0" r="2.6" fill="#8B5CF6"/>
+    <circle cx="0" cy="82" r="2.6" fill="#6366F1"/>
+    <circle cx="-82" cy="0" r="3.4" fill="#2563EB"/>
+
+    <circle r="54" fill="none" stroke="url(#acGrad)" stroke-width="1.2" opacity="0.7"/>
+    <line x1="0" y1="-54" x2="0" y2="-66" stroke="#5B5FE8" stroke-width="1.2"/>
+    <line x1="54" y1="0" x2="66" y2="0" stroke="#5B5FE8" stroke-width="1.2"/>
+    <line x1="0" y1="54" x2="0" y2="66" stroke="#5B5FE8" stroke-width="1.2"/>
+    <line x1="-54" y1="0" x2="-66" y2="0" stroke="#5B5FE8" stroke-width="1.2"/>
+
+    <circle r="30" fill="url(#acCore)"/>
+    <circle r="30" fill="none" stroke="url(#acGrad)" stroke-width="1.5"/>
+    <circle r="9" fill="url(#acGrad)"/>
+  </g>
+</svg>
