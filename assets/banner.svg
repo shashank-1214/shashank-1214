@@ -62,16 +62,16 @@
       <circle r="58" fill="none" stroke="url(#brandGrad)" stroke-width="1.4" opacity="0.7"/>
 
       <g transform="rotate(0)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
       </g>
       <g transform="rotate(90)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
       </g>
       <g transform="rotate(180)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
       </g>
       <g transform="rotate(270)">
-        <line x1="0" y1="-58" x2="0" y2="-72" stroke="url(#brandGrad)" stroke-width="1.4"/>
+        <line x1="0" y1="-58" x2="0" y2="-72" stroke="#5B5FE8" stroke-width="1.4"/>
       </g>
 
       <circle r="34" fill="url(#coreCenter)"/>
