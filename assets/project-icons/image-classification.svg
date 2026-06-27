@@ -1,1 +1,25 @@
+<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Computer vision icon">
+  <title>Computer vision</title>
+  <desc>Viewfinder frame with a scan grid, representing image classification.</desc>
 
+  <defs>
+    <linearGradient id="cvGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="52" height="52" rx="14" fill="#EFF4FF"/>
+
+  <g stroke="url(#cvGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M16 14 H12 a2 2 0 0 0 -2 2 v4"/>
+    <path d="M40 14 H44 a2 2 0 0 1 2 2 v4"/>
+    <path d="M16 42 H12 a2 2 0 0 1 -2 -2 v-4"/>
+    <path d="M40 42 H44 a2 2 0 0 0 2 -2 v-4"/>
+  </g>
+
+  <circle cx="28" cy="28" r="8" fill="none" stroke="url(#cvGrad)" stroke-width="2"/>
+  <circle cx="28" cy="28" r="2.6" fill="url(#cvGrad)"/>
+  <line x1="28" y1="16" x2="28" y2="20" stroke="#3B6FE0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="28" y1="36" x2="28" y2="40" stroke="#3B6FE0" stroke-width="2" stroke-linecap="round"/>
+</svg>
